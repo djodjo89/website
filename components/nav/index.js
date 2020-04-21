@@ -22,11 +22,17 @@ export default function Nav() {
                 }
                 ul { 
                     margin: 0;
-                    padding-top: 7%;
+                    padding-top: 2%;
                     padding-left: 0;
                     list-style: none; 
                     display: flex; 
                     justify-content: flex-start; 
+                }
+                
+                @media only screen and (max-width: 768px) {
+                    ul {
+                        padding-top: 7%;
+                    }
                 }
                 li { 
                     margin-right: 5%;

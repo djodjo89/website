@@ -6,8 +6,10 @@ export default function Message({
                                     formId,
                                 }) {
     return (
-        <div>
-            <label for={id}>{children}</label>
+        <div className={'message'}>
+            <div>
+                <label htmlFor={id}>{children}</label>
+            </div>
             <textarea
                 id={id}
                 name={name}
@@ -18,7 +20,10 @@ export default function Message({
             >
             </textarea>
             <style jsx>{`
-                div { margin-top: 5% }
+                .message {
+                    margin-top: 5%;
+                    flex-direction: column;
+                }
                 textarea { margin-top: 2% }
             `}</style>
         </div>
