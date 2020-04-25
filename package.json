@@ -8,10 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/core": "3.1.1",
+    "formik": "^2.1.4",
     "global": "^4.4.0",
     "netlify-cli": "^2.47.0",
     "next": "9.3.5",
+    "node-fetch": "^2.6.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-material-ui-form": "^1.1.7",
+    "sweetalert2": "^9.10.12"
   }
 }
