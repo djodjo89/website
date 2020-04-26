@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 export default function Form() {
     const handleSubmit = async values => {
         console.log('Values', values);
-        const response = await fetch(process.env.mailerUrl, {
+        const response = await fetch('https://us-central1-website-back-9b3f1.cloudfunctions.net/contact', {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json',
