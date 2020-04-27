@@ -4,7 +4,9 @@ import Header from '../header';
 export default function Layout({ children }) {
     return (
         <div>
-            <Nav/>
+            <Header>
+                <Nav/>
+            </Header>
             <div className={'container'}>
                 {children}
             </div>

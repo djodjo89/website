@@ -28,18 +28,3 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
-
-# TernJS port file
-.tern-port
-
-# IntelliJ file
-.idea
-
-# Local Netlify folder
-.netlify
-
-# TernJS port file
-.tern-port
-
-# IntelliJ file
-.idea
