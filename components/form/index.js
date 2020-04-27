@@ -10,24 +10,6 @@ import { Formik, Form, Field } from 'formik';
 import Loader from '../loader';
 
 export default function ContactForm() {
-
-    const validate = values => {
-        const errors = {};
-        if (!values.name) {
-            errors.name = 'Required';
-        }
-        if (!values.email) {
-            errors.email = 'Required';
-        }
-        if (!values.subject) {
-            errors.subject = 'Required';
-        }
-        if (!values.content) {
-            errors.content = 'Required';
-        }
-        return errors;
-    };
-
     return (
         <Grid item>
             <Formik
@@ -72,7 +54,6 @@ export default function ContactForm() {
 
                     console.log('Response', body);
                 }}
-                validate={validate}
             >
                 {({ isSubmitting }) =>
                     <Form>

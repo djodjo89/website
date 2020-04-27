@@ -29,16 +29,19 @@ const linkContainer = {
     textDecoration: 'none',
 };
 
+const pages = [
+    { url: '/', text: 'Home' },
+    { url: '/about', text: 'About' },
+    { url: '/contact', text: 'Contact' },
+];
+
 export default function Nav() {
     return (
         <AppBar position={'sticky'} style={{ backgroundColor: 'black' }}>
             <Toolbar style={{ padding: 0, height: 50 }}>
-                <Grid item xs={12} sm={3} md={2} style={{ height: '100%' }}>
+                <Grid item xs={12} sm={pages.length * 2} md={pages.length * 2} lg={pages.length} style={{ height: '100%' }}>
                     <List dense={true} style={flexContainer} width={1}>
-                        {(() => [
-                            { url: '/', text: 'Home' },
-                            { url: '/contact', text: 'Contact' },
-                        ].map(({ url, text }) => (
+                        {(() => pages.map(({ url, text }) => (
                             <Link key={url} href={url}>
                                 <ButtonBase style={fullSize}>
                                     <a style={linkContainer}>
