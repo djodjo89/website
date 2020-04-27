@@ -39,7 +39,7 @@ export default function Nav() {
                             { url: '/', text: 'Home' },
                             { url: '/contact', text: 'Contact' },
                         ].map(({ url, text }) => (
-                            <Link href={url}>
+                            <Link key={url} href={url}>
                                 <ButtonBase style={fullSize}>
                                     <a style={linkContainer}>
                                             <Typography

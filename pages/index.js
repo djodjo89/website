@@ -5,7 +5,7 @@ import Pitch from '../components/pitch';
 import Technologies from '../components/technologies';
 import SocialNetworks from '../components/socialnetworks';
 import Fade from '@material-ui/core/Fade';
-import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
 
 export default function Home() {
     return (
@@ -13,13 +13,13 @@ export default function Home() {
             <Head>
                 <title>Home</title>
             </Head>
-            <Fade timeout={500} direction={'right'} in mountOnEnter unmountOnExit>
-                <Box>
+            <Fade timeout={500} in>
+                <Grid>
                     <MainTitle />
                     <Pitch />
                     <Technologies />
                     <SocialNetworks />
-                </Box>
+                </Grid>
             </Fade>
         </Layout>
     )
