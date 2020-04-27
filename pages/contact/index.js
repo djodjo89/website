@@ -1,8 +1,8 @@
 import Layout from '../../components/layout';
 import Head from 'next/head';
-import Grid from '@material-ui/core/Grid';
-import ContactDetails from '../../components/contactdetails';
 import ContactForm from '../../components/form';
+import Slide from '@material-ui/core/Slide';
+import Box from '@material-ui/core/Box';
 
 export default function Contact () {
     return (
@@ -10,10 +10,11 @@ export default function Contact () {
             <Head>
                 <title>Contact</title>
             </Head>
-            <Grid container spacing={4}>
-                <ContactDetails />
-                <ContactForm />
-            </Grid>
+            <Slide direction={'left'} in mountOnEnter>
+                <Box>
+                    <ContactForm />
+                </Box>
+            </Slide>
         </Layout>
     );
 }
