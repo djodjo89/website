@@ -33,27 +33,25 @@ const linkContainer = {
 export default function Nav() {
     return (
         <AppBar position={'sticky'} style={{ backgroundColor: 'black' }}>
-            <Toolbar style={{ padding: 0 }} container>
+            <Toolbar style={{ padding: 0, height: 50 }}>
                 <Grid item xs={12} sm={3} md={2} style={{ height: '100%' }}>
                     <List dense={true} style={flexContainer} width={1}>
                         {(() => [
                             { url: '/', text: 'Home' },
                             { url: '/contact', text: 'Contact' },
                         ].map(({ url, text }) => (
-                            <ListItem key={url} style={{ padding: 0, display: 'flex', justifyContent: 'center' }}>
+                            <Link href={url}>
                                 <ButtonBase style={fullSize}>
-                                    <Link href={url}>
-                                        <a style={linkContainer}>
+                                    <a style={linkContainer}>
                                             <Typography
                                                 type={'h6'}
                                                 style={{ color: 'white', fontWeight: 600 }}
                                             >
                                                 {text}
                                             </Typography>
-                                        </a>
-                                    </Link>
+                                    </a>
                                 </ButtonBase>
-                            </ListItem>
+                            </Link>
                         )))()}
                     </List>
                 </Grid>

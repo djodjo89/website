@@ -32,8 +32,10 @@ export default function ContactForm() {
         <Grid item container spacing={2}>
             <Grid item>
                 <Typography component={'h2'} variant={'h4'}>
-                    Send me a message
+                    Contact me
                 </Typography>
+                <p>Phone : +33651314088</p>
+                <p>Email : msimion.pro@gmail.com</p>
             </Grid>
             <Grid item>
                 <Formik
