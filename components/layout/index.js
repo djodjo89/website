@@ -1,13 +1,23 @@
 import Nav from '../nav';
-import Header from '../header';
+import Fade from '@material-ui/core/Fade';
+import Grid from '@material-ui/core/Grid';
+import Head from 'next/head';
+import React from 'react';
 
-export default function Layout({ children }) {
+export default function Layout({ spacing, title, children }) {
     return (
         <div>
+            <Head>
+                <title>{title}</title>
+            </Head>
             <Nav/>
-            <div className={'container'}>
-                {children}
-            </div>
+            <Fade timeout={500} in>
+                <div className={'container'}>
+                    <Grid container spacing={spacing}>
+                        {children}
+                    </Grid>
+                </div>
+            </Fade>
             <style jsx>{`
                 .container {
                     max-width: 36rem;

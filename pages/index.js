@@ -1,26 +1,26 @@
 import Layout from '../components/layout';
-import Head from 'next/head';
-import MainTitle from '../components/maintitle';
-import Pitch from '../components/pitch';
-import Technologies from '../components/technologies';
-import SocialNetworks from '../components/socialnetworks';
-import Fade from '@material-ui/core/Fade';
+import H1 from '../components/h1';
+import H2 from '../components/h2';
 import Grid from '@material-ui/core/Grid';
 
 export default function Home() {
     return (
-        <Layout>
-            <Head>
-                <title>Home</title>
-            </Head>
-            <Fade timeout={500} in>
-                <Grid>
-                    <MainTitle />
-                    <Pitch />
-                    <Technologies />
-                    <SocialNetworks />
+        <Layout title={'Home'} spacing={5}>
+            <Grid item style={{ width: '100%' }}>
+                <H1 style={{ textAlign: 'center' }}>
+                    Welcome on my website !
+                </H1>
+            </Grid>
+            {(() => [
+                <>I'm <a href={'/about'} style={{ textDecoration: 'none' }}>Mathys Simion</a></>,
+                "Fullstack ReactJS & NodeJS developer",
+            ].map(content => (
+                <Grid item style={{ width: '100%' }}>
+                    <H2 style={{ textAlign: 'center' }}>
+                        {content}
+                    </H2>
                 </Grid>
-            </Fade>
+            )))()}
         </Layout>
     )
 }
