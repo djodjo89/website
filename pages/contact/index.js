@@ -2,7 +2,7 @@ import Layout from '../../components/layout';
 import Head from 'next/head';
 import ContactForm from '../../components/form';
 import Fade from '@material-ui/core/Fade';
-import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
 
 export default function Contact () {
     return (
@@ -10,10 +10,10 @@ export default function Contact () {
             <Head>
                 <title>Contact</title>
             </Head>
-            <Fade timeout={500} direction={'left'} in mountOnEnter unmountOnExit>
-                <Box>
+            <Fade timeout={500} in>
+                <Grid>
                     <ContactForm />
-                </Box>
+                </Grid>
             </Fade>
         </Layout>
     );
