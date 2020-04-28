@@ -14,13 +14,7 @@ export default function Home() {
             {(() => [
                 <>I'm <a href={'/about'} style={{ textDecoration: 'none' }}>Mathys Simion</a></>,
                 "Fullstack ReactJS & NodeJS developer",
-            ].map(content => (
-                <Grid item style={{ width: '100%' }}>
-                    <H2 style={{ textAlign: 'center' }}>
-                        {content}
-                    </H2>
-                </Grid>
-            )))()}
+            ].map(content => <H2 style={{ textAlign: 'center' }}>{content}</H2>))()}
         </Layout>
     )
 }

@@ -1,30 +1,22 @@
-import Grid from '@material-ui/core/Grid';
+import CustomList from '../customlist';
+import CustomIcon from '../icons/customicon';
+import React from 'react';
 
 export default function SocialNetworks() {
     return (
-        <Grid item>
-            <h2>Social networks</h2>
-            <ul>
-                <li>
-                    <a href={'https://www.linkedin.com/in/mathys-simion/'}>
-                        LinkedIn
-                    </a>
-                </li>
-                <li>
-                    <a href={'https://github.com/djodjo89'}>
-                        Github
-                    </a>
-                </li>
-            </ul>
-            <style jsx>{`
-                ul { 
-                    list-style: none;
-                    display: flex; 
-                    justify-content: flex-start;
-                }
-                li { margin: 0 5% 0 0; }
-                a { text-decoration: none; }
-            `}</style>
-        </Grid>
+        <CustomList
+            title={'Social networks'}
+            items={[
+                <CustomIcon url={'linkedin.com/in/mathys-simion'}
+                            width={36}
+                            height={36}
+                            noRadius
+                >
+                    LinkedIn
+                </CustomIcon>,
+                <CustomIcon url={'gitlab.com/djodjo89'}>GitLab</CustomIcon>,
+                <CustomIcon url={'github.com/djodjo89'}>GitHub</CustomIcon>,
+            ]}
+        />
     )
 }
