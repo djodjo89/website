@@ -22,7 +22,7 @@ export default function Layout({ spacing, title, children }) {
                 .container {
                     max-width: 36rem;
                     padding: 0 1rem;
-                    margin: 3rem auto 6rem;
+                    margin: 0.5rem auto 6rem;
                 }
             `}</style>
             <style global jsx>{`
