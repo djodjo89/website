@@ -15,23 +15,21 @@ export default function CustomList({ title, items }) {
             sm={6}
         >
             <H2 style={{ textAlign: 'center' }}>{title}</H2>
-            <Box>
-                <Grid item>
-                    <List style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        justifyContent: 'center',
-                        flexWrap: 'wrap',
-                    }}
-                    >
-                        {(() => items.map(item =>
-                            <Grid xs={3}>
-                                <ListItem style={{ justifyContent: 'center' }}>{item}</ListItem>
-                            </Grid>
-                        ))()}
-                    </List>
-                </Grid>
-            </Box>
+            <Grid item>
+                <List style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    flexWrap: 'wrap',
+                }}
+                >
+                    {(() => items.map((item, index) =>
+                        <Grid item key={index} xs={3}>
+                            <ListItem style={{ justifyContent: 'center' }}>{item}</ListItem>
+                        </Grid>
+                    ))()}
+                </List>
+            </Grid>
             <style jsx>{`
                 ul { 
                     list-style: none;

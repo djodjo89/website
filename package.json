@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
@@ -25,5 +25,8 @@
     "react-dom": "16.13.1",
     "react-material-ui-form": "^1.1.7",
     "sweetalert2": "^9.10.12"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^1.7.0"
   }
 }

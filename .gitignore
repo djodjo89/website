@@ -44,3 +44,5 @@ yarn-error.log*
 
 # IntelliJ file
 .idea
+
+.now

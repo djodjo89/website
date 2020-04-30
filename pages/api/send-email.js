@@ -11,6 +11,9 @@ const {
     OAUTH_PLAYGROUND_URL,
     OAUTH_USER_EMAIL,
 } = process.env;
+
+const tokenRefresh = decodeURIComponent(OAUTH_TOKEN_REFRESH);
+
 const OAuth2 = google.auth.OAuth2;
 const entities = new Entities();
 
@@ -21,24 +24,25 @@ const oauth2Client = new OAuth2(
 );
 
 oauth2Client.setCredentials({
-    refresh_token: OAUTH_TOKEN_REFRESH,
-});
-const accessToken = oauth2Client.getAccessToken();
-
-const transport = mailer.createTransport({
-    service: 'gmail',
-    auth: {
-        type: 'OAuth2',
-        user: OAUTH_USER_EMAIL,
-        clientId: OAUTH_CLIENT_ID,
-        clientSecret: OAUTH_CLIENT_SECRET,
-        refreshToken: OAUTH_TOKEN_REFRESH,
-        accessToken: accessToken,
-    },
+    refresh_token: tokenRefresh,
 });
 
 module.exports = (req, res) => {
-    cors(req, res, () => {
+    cors(req, res, async () => {
+        const accessToken = await oauth2Client.getAccessToken();
+
+        const transport = mailer.createTransport({
+            service: 'gmail',
+            auth: {
+                type: 'OAuth2',
+                user: OAUTH_USER_EMAIL,
+                clientId: OAUTH_CLIENT_ID,
+                clientSecret: OAUTH_CLIENT_SECRET,
+                refreshToken: tokenRefresh,
+                accessToken: accessToken,
+            },
+        });
+
         const isString = variable => typeof variable === 'string';
         const message = {};
         const encodeBody = _ => Object.entries(req.body)
@@ -67,7 +71,7 @@ module.exports = (req, res) => {
         if (correctEmail && !emptySubject) {
             const options = {
                 from: `${name} - <${email}>`,
-                to: env.user.email,
+                to: OAUTH_USER_EMAIL,
                 subject: subject,
                 text: `From: ${email}\n\n${content}`,
             };

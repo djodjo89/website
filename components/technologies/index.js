@@ -12,6 +12,12 @@ export default function Technologies() {
                 <CustomIcon url={'material-ui.com'}>Material</CustomIcon>,
                 <CustomIcon url={'www.typescriptlang.org'} noRadius>TypeScript</CustomIcon>,
                 <CustomIcon url={'nextjs.org'} noRadius width={70}>Next</CustomIcon>,
+                <CustomIcon url={'graphql.org'}>GraphQL</CustomIcon>,
+                <CustomIcon url={'apollographql.com'}>Apollo</CustomIcon>,
+                <CustomIcon url={'electronjs.com'}
+                    width={36}
+                    noRadius
+                >Electron</CustomIcon>,
                 <CustomIcon
                     url={'nodejs.org/'}
                     width={36}

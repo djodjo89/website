@@ -24,7 +24,7 @@ export default function ContactForm() {
 
                     console.log('Values', values);
 
-                    const response = await fetch('https://us-central1-website-back-9b3f1.cloudfunctions.net/contact', {
+                    const response = await fetch(`/api/send-email`, {
                         method: 'post',
                         headers: {
                             'Content-Type': 'application/json',
