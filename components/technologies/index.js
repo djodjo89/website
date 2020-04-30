@@ -1,21 +1,31 @@
-import Grid from '@material-ui/core/Grid';
+import CustomList from '../customlist';
+import CustomIcon from '../icons/customicon';
+import React from 'react';
 
 export default function Technologies() {
     return (
-        <Grid item>
-            <h2>Technologies</h2>
-            <ul>
-                <li>React</li>
-                <li>NodeJS</li>
-            </ul>
-            <style jsx>{`
-                ul { 
-                    list-style: none;
-                    display: flex; 
-                    justify-content: flex-start;
-                }
-                li { margin: 0 5% 0 0; }
-            `}</style>
-        </Grid>
+        <CustomList
+            title={'Technologies'}
+            items={[
+                <CustomIcon url={'reactjs.org'}>React</CustomIcon>,
+                <CustomIcon url={'nestjs.com'}>Nest</CustomIcon>,
+                <CustomIcon url={'material-ui.com'}>Material</CustomIcon>,
+                <CustomIcon url={'www.typescriptlang.org'} noRadius>TypeScript</CustomIcon>,
+                <CustomIcon url={'nextjs.org'} noRadius width={70}>Next</CustomIcon>,
+                <CustomIcon url={'graphql.org'}>GraphQL</CustomIcon>,
+                <CustomIcon url={'apollographql.com'}>Apollo</CustomIcon>,
+                <CustomIcon url={'electronjs.com'}
+                    width={36}
+                    noRadius
+                >Electron</CustomIcon>,
+                <CustomIcon
+                    url={'nodejs.org/'}
+                    width={36}
+                    noRadius
+                >
+                    Node
+                </CustomIcon>,
+            ]}
+        />
     )
 }
