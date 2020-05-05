@@ -12,19 +12,10 @@ export default function Layout({ spacing, title, children }) {
             </Head>
             <Nav/>
             <Fade timeout={500} in>
-                <div className={'container'}>
-                    <Grid container spacing={spacing} direction={'column'}>
-                        {children}
-                    </Grid>
-                </div>
+                <Grid container spacing={spacing} direction={'column'}>
+                    {children}
+                </Grid>
             </Fade>
-            <style jsx>{`
-                .container {
-                    max-width: 36rem;
-                    padding: 0 1rem;
-                    margin: 2rem auto 6rem;
-                }
-            `}</style>
             <style global jsx>{`
                 body {
                     margin: 0;

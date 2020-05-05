@@ -42,7 +42,7 @@ export default function Nav() {
                 <Grid item xs={12} sm={pages.length * 2} md={pages.length * 2} lg={pages.length} style={{ height: '100%' }}>
                     <List dense={true} style={flexContainer} width={1}>
                         {(() => pages.map(({ url, text }) => (
-                            <Link key={url} href={url}>
+                            <Link key={url} href={`${url.substring(0,1)}#${url.substring(1, url.length)}`}>
                                 <ButtonBase style={fullSize}>
                                     <a style={linkContainer}>
                                             <Typography
