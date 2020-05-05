@@ -6,6 +6,9 @@ import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import Grid from '@material-ui/core/Grid';
 import ButtonBase from '@material-ui/core/ButtonBase';
+import HomeIcon from '@material-ui/icons/Home';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
+import InfoIcon from '@material-ui/icons/Info';
 
 const flexContainer =  {
     display: 'flex',
@@ -29,15 +32,50 @@ const linkContainer = {
     textDecoration: 'none',
 };
 
+const divContainer = {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+};
+
 const pages = [
     { url: '/', text: 'Home' },
     { url: '/about', text: 'About' },
     { url: '/contact', text: 'Contact' },
 ];
 
-export default function Nav() {
+const appBarStyle = isMobile => {
+    const style = { backgroundColor: 'black' };
+    const position = isMobile ? { bottom: 0, top: 'initial' } : { top: 0 };
+    return Object.assign(style, position);
+};
+
+const icon = (url, text) => {
+    switch (url) {
+        case '/':
+            return <HomeIcon />;
+            break;
+        case '/about':
+            return <InfoIcon />;
+            break;
+        case '/contact':
+            return <ContactMailIcon />;
+            break;
+        default:
+            return (
+                <Typography
+                    type={'h6'}
+                    style={{ color: 'white', fontWeight: 600 }}
+                >
+                    {text}
+                </Typography>
+            );
+    }
+};
+
+export default function Nav({ isMobile }) {
     return (
-        <AppBar position={'sticky'} style={{ backgroundColor: 'black' }}>
+        <AppBar position={isMobile ? 'fixed' : 'sticky'} style={appBarStyle(isMobile)}>
             <Toolbar style={{ padding: 0, height: 50 }}>
                 <Grid item xs={12} sm={pages.length * 2} md={pages.length * 2} lg={pages.length} style={{ height: '100%' }}>
                     <List dense={true} style={flexContainer} width={1}>
@@ -45,12 +83,18 @@ export default function Nav() {
                             <Link key={url} href={`${url.substring(0,1)}#${url.substring(1, url.length)}`}>
                                 <ButtonBase style={fullSize}>
                                     <a style={linkContainer}>
-                                            <Typography
-                                                type={'h6'}
-                                                style={{ color: 'white', fontWeight: 600 }}
-                                            >
-                                                {text}
-                                            </Typography>
+                                        <div style={divContainer}>
+                                            {
+                                                isMobile
+                                                    ? icon(url, text)
+                                                    : <Typography
+                                                        type={'h6'}
+                                                        style={{ color: 'white', fontWeight: 600 }}
+                                                    >
+                                                        {text}
+                                                    </Typography>
+                                            }
+                                        </div>
                                     </a>
                                 </ButtonBase>
                             </Link>

@@ -6,7 +6,7 @@ import SocialNetworks from '../../components/socialnetworks';
 import H1 from '../../components/h1';
 import Paragrah from '../../components/paragraph';
 
-export default function About() {
+export default function About({ isMobile }) {
     return (
         <Grid id={'about'} style={{ backgroundColor: 'rgba(0,0,0,.2)' }}>
             <Grid container spacing={2} direction={'column'} style={{
@@ -16,7 +16,7 @@ export default function About() {
                 width: '100%',
             }}>
                 <Grid item container spacing={2} style={{
-                    paddingTop: '5em !important',
+                    paddingTop: `${isMobile ? 0 : 5}em !important`,
                     width: '100%',
                     padding: '10px',
                 }}

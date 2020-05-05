@@ -3,7 +3,7 @@ import React from 'react';
 import ContactHead from '../../components/contacthead';
 import Grid from '@material-ui/core/Grid';
 
-export default function Contact () {
+export default function Contact ({ isMobile }) {
     return (
         <Grid id={'contact'}>
             <Grid container spacing={2} direction={'column'} style={{
@@ -13,7 +13,7 @@ export default function Contact () {
                 width: '100%',
             }}>
                 <Grid item container spacing={2} style={{
-                    paddingTop: '5em',
+                    paddingTop: `${isMobile ? 0 : 5}em !important`,
                     width: 'calc(100% + 9px)',
                 }}
                 >
