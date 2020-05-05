@@ -11,7 +11,7 @@ export default function Layout({ spacing, title, children }) {
                 <title>{title}</title>
             </Head>
             <Nav/>
-            <Fade timeout={500} in>
+            <Fade timeout={500} in style={{ width: '100%', margin: '0' }}>
                 <Grid container spacing={spacing} direction={'column'}>
                     {children}
                 </Grid>

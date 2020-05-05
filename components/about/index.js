@@ -4,10 +4,7 @@ import Portrait from '../../components/portrait';
 import Technologies from '../../components/technologies';
 import SocialNetworks from '../../components/socialnetworks';
 import H1 from '../../components/h1';
-import Layout from '../../components/layout';
 import Paragrah from '../../components/paragraph';
-import Welcome from '../welcome';
-import Fade from '@material-ui/core/Fade';
 
 export default function About() {
     return (
@@ -16,10 +13,11 @@ export default function About() {
                 maxWidth: '36rem',
                 padding: '0 1rem',
                 margin: '2rem auto 6rem',
+                width: '100%',
             }}>
                 <Grid item container spacing={2} style={{
                     paddingTop: '5em !important',
-                    width: 'calc(100% + 9px)',
+                    width: '100%',
                     padding: '10px',
                 }}
                 >

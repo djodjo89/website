@@ -10,6 +10,7 @@ export default function Contact () {
                 maxWidth: '36rem',
                 padding: '0 1rem',
                 margin: '2rem auto 6rem',
+                width: '100%',
             }}>
                 <Grid item container spacing={2} style={{
                     paddingTop: '5em',

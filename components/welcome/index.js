@@ -14,6 +14,7 @@ export default function Welcome() {
                   height: '100vh',
                   justifyContent: 'center',
                   paddingBottom: '20vh',
+                  width: '100%',
               }}>
             <Grid item style={{ width: '100%' }}>
                 <H1 style={{ textAlign: 'center' }}>
@@ -32,6 +33,7 @@ export default function Welcome() {
                         background-size: cover;
                         background-attachment: fixed;
                         height: 100%;
+                        margin: 0 !important;
                 }
             `}</style>
         </Grid>
