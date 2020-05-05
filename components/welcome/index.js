@@ -1,9 +1,17 @@
 import Grid from '@material-ui/core/Grid';
 import H1 from '../h1';
 import H2 from '../h2';
-import React from 'react';
+import React, {useEffect} from 'react';
+import { useRouter } from 'next/router';
 
 export default function Welcome() {
+    const path = useRouter().asPath;
+    useEffect(() => {
+        if (['/', '/#'].includes(path)) {
+            window.scrollTo(0,0);
+        }
+    }, []);
+
     return (
         <Grid id={'welcome'}
               item

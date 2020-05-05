@@ -4,12 +4,11 @@ import Portrait from '../../components/portrait';
 import Technologies from '../../components/technologies';
 import SocialNetworks from '../../components/socialnetworks';
 import H1 from '../../components/h1';
-import Layout from '../../components/layout';
 import Paragrah from '../../components/paragraph';
-import Welcome from '../welcome';
-import Fade from '@material-ui/core/Fade';
+import { isBrowser } from "react-device-detect";
 
 export default function About() {
+    const paddingTop = isBrowser ? '5em !important' : 0;
     return (
         <Grid id={'about'} style={{ backgroundColor: 'rgba(0,0,0,.2)' }}>
             <Grid container spacing={2} direction={'column'} style={{
@@ -18,7 +17,7 @@ export default function About() {
                 margin: '2rem auto 6rem',
             }}>
                 <Grid item container spacing={2} style={{
-                    paddingTop: '5em !important',
+                    paddingTop,
                     width: 'calc(100% + 9px)',
                     padding: '10px',
                 }}
