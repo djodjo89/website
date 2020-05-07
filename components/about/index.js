@@ -8,7 +8,7 @@ import Paragrah from '../../components/paragraph';
 
 export default function About({ isMobile }) {
     return (
-        <Grid id={'about'} style={{ backgroundColor: 'rgba(0,0,0,.2)' }}>
+        <Grid id={'about'} style={{ backgroundColor: 'rgba(0,0,0,.1)' }}>
             <Grid container spacing={2} direction={'column'} style={{
                 maxWidth: '36rem',
                 padding: '0 1rem',
@@ -29,7 +29,7 @@ export default function About({ isMobile }) {
                     </Paragrah>
                     <Paragrah title={'My Skills'}>
                         I'm specialized in ReactJS and NodeJS, and some frameworks made on top of them
-                        like Next.JS, Material-ui or NestJS. With them I can make websites from scratch
+                        like Next.JS, Material-UI or NestJS. With them I can make websites from scratch
                         quickly.
                     </Paragrah>
 

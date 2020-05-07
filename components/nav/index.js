@@ -44,8 +44,10 @@ const pages = [
     { url: '/contact', text: 'Contact' },
 ];
 
+const textColor = '#e8e6e3';
+
 const appBarStyle = isMobile => {
-    const style = { backgroundColor: 'black' };
+    const style = { backgroundColor: '#0d0e0f' };
     const position = isMobile ? { bottom: 0, top: 'initial' } : { top: 0 };
     return Object.assign(style, position);
 };
@@ -53,19 +55,19 @@ const appBarStyle = isMobile => {
 const icon = (url, text) => {
     switch (url) {
         case '/':
-            return <HomeIcon />;
+            return <HomeIcon style={{ color: textColor }} />;
             break;
         case '/about':
-            return <InfoIcon />;
+            return <InfoIcon style={{ color: textColor }} />;
             break;
         case '/contact':
-            return <ContactMailIcon />;
+            return <ContactMailIcon style={{ color: textColor }} />;
             break;
         default:
             return (
                 <Typography
                     type={'h6'}
-                    style={{ color: 'white', fontWeight: 600 }}
+                    style={{ color: textColor, fontWeight: 600 }}
                 >
                     {text}
                 </Typography>
@@ -80,7 +82,7 @@ export default function Nav({ isMobile }) {
                 <Grid item xs={12} sm={pages.length * 2} md={pages.length * 2} lg={pages.length} style={{ height: '100%' }}>
                     <List dense={true} style={flexContainer} width={1}>
                         {(() => pages.map(({ url, text }) => (
-                            <Link key={url} href={`${url.substring(0,1)}#${url.substring(1, url.length)}`}>
+                            <Link key={url} href={`${url.substring(0,1)}${'/' === url ? '' : '#' }${url.substring(1, url.length)}`}>
                                 <ButtonBase style={fullSize}>
                                     <a style={linkContainer}>
                                         <div style={divContainer}>
@@ -89,7 +91,7 @@ export default function Nav({ isMobile }) {
                                                     ? icon(url, text)
                                                     : <Typography
                                                         type={'h6'}
-                                                        style={{ color: 'white', fontWeight: 600 }}
+                                                        style={{ color: textColor, fontWeight: 600 }}
                                                     >
                                                         {text}
                                                     </Typography>

@@ -2,7 +2,9 @@ import Avatar from '@material-ui/core/Avatar';
 
 export default function CustomIcon({ url, width, height, noRadius, children }) {
     const label = children.toString();
-    const style = {};
+    const style = {
+        filter: 'invert(.5)',
+    };
 
     if (width) {
         style.width = `${width}px`;

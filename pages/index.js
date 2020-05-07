@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 export default function Home({ isMobile }) {
     const path = useRouter().asPath;
     useEffect(() => {
-        if (['/', '/#'].includes(path)) {
+        if (['/', '/#', '/#welcome'].includes(path)) {
             window.scrollTo(0,0);
         }
     }, []);

@@ -11,7 +11,7 @@ import Loader from '../loader';
 
 export default function ContactForm() {
     return (
-        <Grid item>
+        <Grid>
             <Formik
                 initialValues={{
                     name: '',

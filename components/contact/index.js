@@ -17,7 +17,7 @@ export default function Contact ({ isMobile }) {
                     width: 'calc(100% + 9px)',
                 }}
                 >
-                    <Grid item container spacing={2} style={{ height: '100vh', padding: '10px' }}>
+                    <Grid item style={{ height: '100vh', padding: '10px' }}>
                         <ContactHead />
                         <ContactForm />
                     </Grid>

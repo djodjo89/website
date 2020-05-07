@@ -57,6 +57,11 @@
   dependencies:
     "@analytics/cookie-utils" "^0.2.3"
 
+"@assortment/darkmodejs@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@assortment/darkmodejs/-/darkmodejs-1.2.0.tgz#4580dab94a85476cd68b3050368a40fdb2bae63a"
+  integrity sha512-tjTH0romXK/J7ftve93cWmgIJ7djK8ZL75P60/YG0VOMwSYG3EWfxRX/hDpmyAHbxu1aryQVK1IhFgq8/w0+QA==
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.5.5", "@babel/code-frame@^7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.8.3.tgz#33e25903d7481181534e12ec0a25f16b6fcf419e"
@@ -7355,6 +7360,14 @@ netlify@^4.0.5, netlify@^4.1.1:
     through2-filter "^3.0.0"
     through2-map "^3.0.0"
 
+next-dark-mode@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/next-dark-mode/-/next-dark-mode-2.2.3.tgz#30923440377a0fffec57a9b47909a0402dfa93ee"
+  integrity sha512-i4lb1AhCTzQUS2ExVyJAj/28vAYW71CaOK24yRBaTukx0T6lbuz1tOdbT0hdZ3zX35BYZ2zB9Vsfw0ZF5558Pw==
+  dependencies:
+    "@assortment/darkmodejs" "^1.2.0"
+    nookies "^2.2.2"
+
 next-tick@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
@@ -7481,6 +7494,14 @@ nodemailer@^6.4.6:
   version "6.4.6"
   resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.4.6.tgz#d37f504f6560b36616f646a606894fe18819107f"
   integrity sha512-/kJ+FYVEm2HuUlw87hjSqTss+GU35D4giOpdSfGp7DO+5h6RlJj7R94YaYHOkoxu1CSaM0d3WRBtCzwXrY6MKA==
+
+nookies@^2.2.2:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/nookies/-/nookies-2.3.0.tgz#56726ff10a6455820e4ff0d11602c3af2b21a0cb"
+  integrity sha512-qet6azxnYVeojj4O9qmm0pL8yp8QWrnPQZxS8aZED5s1vGQmhLhoWK4iYS1NDL6ajhpgHzCMPYjqsWSH83xvQw==
+  dependencies:
+    cookie "^0.4.0"
+    set-cookie-parser "^2.4.3"
 
 noop2@^2.0.0:
   version "2.0.0"
@@ -9404,6 +9425,11 @@ set-blocking@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/set-blocking/-/set-blocking-2.0.0.tgz#045f9782d011ae9a6803ddd382b24392b3d890f7"
   integrity sha1-BF+XgtARrppoA93TgrJDkrPYkPc=
+
+set-cookie-parser@^2.4.3:
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/set-cookie-parser/-/set-cookie-parser-2.4.5.tgz#94a5060724e614c56c65588010594dc4b848fb8d"
+  integrity sha512-LkSDwseogN5l6TerqGzFzL9mUDTxSq3hX2b5AaynjC1nSCNWiDypEgHatfc0v6KcnfgV3/6F6h4ABh6igjzlQQ==
 
 set-value@^2.0.0, set-value@^2.0.1:
   version "2.0.1"
