@@ -4,27 +4,18 @@ import Grid from '@material-ui/core/Grid';
 import Head from 'next/head';
 import React from 'react';
 
-export default function Layout({ spacing, title, children }) {
+export default function Layout({ spacing, title, isMobile, children }) {
     return (
         <div>
             <Head>
                 <title>{title}</title>
             </Head>
-            <Nav/>
-            <Fade timeout={500} in>
-                <div className={'container'}>
-                    <Grid container spacing={spacing} direction={'column'}>
-                        {children}
-                    </Grid>
-                </div>
+            <Nav isMobile={isMobile}/>
+            <Fade timeout={500} in style={{ width: '100%', margin: '0' }}>
+                <Grid container spacing={spacing} direction={'column'}>
+                    {children}
+                </Grid>
             </Fade>
-            <style jsx>{`
-                .container {
-                    max-width: 36rem;
-                    padding: 0 1rem;
-                    margin: 2rem auto 6rem;
-                }
-            `}</style>
             <style global jsx>{`
                 body {
                     margin: 0;

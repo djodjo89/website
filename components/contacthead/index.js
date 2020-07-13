@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function ContactHead() {
     return (
-        <Grid item>
+        <Grid>
             <H1>Contact me</H1>
             <p>Phone : +33651314088</p>
             <p>Email : msimion.pro@gmail.com</p>
