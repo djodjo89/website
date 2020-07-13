@@ -4,7 +4,7 @@ import ListItem from '@material-ui/core/ListItem';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 
-export default function CustomList({ title, items }) {
+export default function CustomList({title, items}) {
     return (
         <Grid
             item
@@ -16,7 +16,7 @@ export default function CustomList({ title, items }) {
         >
             <H2 style={{ textAlign: 'center' }}>{title}</H2>
             <Grid item>
-                <List style={{
+                <Grid container item style={{
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'center',
@@ -24,11 +24,19 @@ export default function CustomList({ title, items }) {
                 }}
                 >
                     {(() => items.map((item, index) =>
-                        <Grid item key={index} xs={3}>
-                            <ListItem style={{ justifyContent: 'center' }}>{item}</ListItem>
+                        <Grid item xs={3} key={index} style={{
+                            justifyContent: 'center',
+                            paddingLeft: '16px',
+                            paddingRight: '16px',
+                            paddingTop: '8px',
+                            paddingBottom: '8px',
+                            display: 'flex',
+                            alignItems: 'center',
+                        }}>
+                            {item}
                         </Grid>
                     ))()}
-                </List>
+                </Grid>
             </Grid>
             <style jsx>{`
                 ul { 

@@ -15,6 +15,7 @@ export default class MyDocument extends Document {
                         rel="stylesheet"
                         type="text/css"
                     />
+                    <meta name={'description'} content={'Mathys Simion\'s  website with a brief presentation and a contact form'} />
                 </Head>
                 <body>
                     <Main />

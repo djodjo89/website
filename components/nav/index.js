@@ -44,8 +44,6 @@ const pages = [
     { url: '/contact', text: 'Contact' },
 ];
 
-const textColor = '#e8e6e3';
-
 const appBarStyle = isMobile => {
     const style = { backgroundColor: '#0d0e0f' };
     const position = isMobile ? { bottom: 0, top: 'initial' } : { top: 0 };
@@ -55,19 +53,19 @@ const appBarStyle = isMobile => {
 const icon = (url, text) => {
     switch (url) {
         case '/':
-            return <HomeIcon style={{ color: textColor }} />;
+            return <HomeIcon />;
             break;
         case '/about':
-            return <InfoIcon style={{ color: textColor }} />;
+            return <InfoIcon />;
             break;
         case '/contact':
-            return <ContactMailIcon style={{ color: textColor }} />;
+            return <ContactMailIcon />;
             break;
         default:
             return (
                 <Typography
                     type={'h6'}
-                    style={{ color: textColor, fontWeight: 600 }}
+                    style={{ color: 'white', fontWeight: 600 }}
                 >
                     {text}
                 </Typography>
@@ -83,7 +81,8 @@ export default function Nav({ isMobile }) {
                     <List dense={true} style={flexContainer} width={1}>
                         {(() => pages.map(({ url, text }) => (
                             <Link key={url} href={`${url.substring(0,1)}${'/' === url ? '' : '#' }${url.substring(1, url.length)}`}>
-                                <ButtonBase style={fullSize}>
+                                <li key={url} style={{ width: '100%' }}>
+                                    <ButtonBase style={fullSize} aria-label={text}>
                                     <a style={linkContainer}>
                                         <div style={divContainer}>
                                             {
@@ -91,7 +90,7 @@ export default function Nav({ isMobile }) {
                                                     ? icon(url, text)
                                                     : <Typography
                                                         type={'h6'}
-                                                        style={{ color: textColor, fontWeight: 600 }}
+                                                        style={{ color: 'white', fontWeight: 600 }}
                                                     >
                                                         {text}
                                                     </Typography>
@@ -99,6 +98,7 @@ export default function Nav({ isMobile }) {
                                         </div>
                                     </a>
                                 </ButtonBase>
+                                </li>
                             </Link>
                         )))()}
                     </List>

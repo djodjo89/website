@@ -61,6 +61,7 @@ export default function ContactForm() {
                         <Grid container spacing={1}>
                             <Grid item xs={12}>
                                 <Field
+                                    id={'name'}
                                     label={'Name'}
                                     type={'text'}
                                     name={'name'}
@@ -73,6 +74,7 @@ export default function ContactForm() {
                             </Grid>
                             <Grid item xs={12}>
                                 <Field
+                                    id={'email'}
                                     label={'Email'}
                                     type={'email'}
                                     name={'email'}
@@ -85,6 +87,7 @@ export default function ContactForm() {
                             </Grid>
                             <Grid item xs={12}>
                                 <Field
+                                    id={'subject'}
                                     label={'Subject'}
                                     type={'text'}
                                     name={'subject'}
@@ -96,6 +99,7 @@ export default function ContactForm() {
                             </Grid>
                             <Grid item xs={12}>
                                 <Field
+                                    id={'content'}
                                     label={'Describe more precisely what you want to do'}
                                     type={'text'}
                                     name={'content'}
