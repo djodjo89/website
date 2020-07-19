@@ -1,6 +1,6 @@
 import React from 'react'
-import Avatar from '@material-ui/core/Avatar'
 import Grid from '@material-ui/core/Grid'
+import LazyAvatar from '../lazyavatar';
 
 export default function Portrait() {
   return (
@@ -15,7 +15,7 @@ export default function Portrait() {
           justifyContent: 'center',
         }}
       >
-        <Avatar alt={'My photo'} src={'/nv_mathys_thumbnail.webp'} style={{
+        <LazyAvatar alt={'My photo'} src={'/nv_mathys_thumbnail.webp'} style={{
             width: '50%',
             height: '100%',
         }} />

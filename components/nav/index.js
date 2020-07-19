@@ -80,10 +80,10 @@ export default function Nav({ isMobile }) {
                 <Grid item xs={12} sm={pages.length * 2} md={pages.length * 2} lg={pages.length} style={{ height: '100%' }}>
                     <List dense={true} style={flexContainer} width={1}>
                         {(() => pages.map(({ url, text }) => (
+                            <li key={url} style={{ width: '100%' }}>
                             <Link key={url} href={`${url.substring(0,1)}${'/' === url ? '' : '#' }${url.substring(1, url.length)}`}>
-                                <li key={url} style={{ width: '100%' }}>
+                                <a style={linkContainer}>
                                     <ButtonBase style={fullSize} aria-label={text}>
-                                    <a style={linkContainer}>
                                         <div style={divContainer}>
                                             {
                                                 isMobile
@@ -96,10 +96,10 @@ export default function Nav({ isMobile }) {
                                                     </Typography>
                                             }
                                         </div>
-                                    </a>
                                 </ButtonBase>
-                                </li>
+                                </a>
                             </Link>
+                            </li>
                         )))()}
                     </List>
                 </Grid>

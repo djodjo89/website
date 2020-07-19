@@ -1,4 +1,4 @@
-import Avatar from '@material-ui/core/Avatar';
+import LazyAvatar from '../../lazyavatar';
 
 export default function CustomIcon({ url, width, height, noRadius, children }) {
     const label = children.toString();
@@ -17,8 +17,8 @@ export default function CustomIcon({ url, width, height, noRadius, children }) {
     }
 
     return (
-        <a href={`https://${url}`}>
-            <Avatar
+        <a href={`https://${url}`} aria-label={label}>
+            <LazyAvatar
                 alt={`${label} Icon`}
                 src={`/${label.toLowerCase()}.svg`}
                 style={style}

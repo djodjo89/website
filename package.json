@@ -23,10 +23,10 @@
     "nodemailer": "^6.4.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-lazyload": "^3.0.0",
     "react-material-ui-form": "^1.1.7",
-    "sweetalert2": "^9.13.1",
-    "react": "^16.13.1",
-    "react-sticky-nav": "^4.0.3"
+    "react-sticky-nav": "^4.0.3",
+    "sweetalert2": "^9.13.1"
   },
   "devDependencies": {
     "dotenv-webpack": "^1.8.0"
