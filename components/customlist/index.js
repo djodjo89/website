@@ -1,8 +1,5 @@
 import H2 from '../h2';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 
 export default function CustomList({title, items}) {
     return (
